@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>org.ibrahimhilali.TimeTracker</id>
+    <name>Time Tracker</name>
+    <version>1.0-SNAPSHOT</version>
+    <vendor email="ebrahelaly@gmail.com" url="http://www.ibrahimhilali.com">Ibrahim Akram Hilali</vendor>
+
+    <description><![CDATA[Time Tracker for Development Time as IDE Plugin ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService id="pluginState" serviceImplementation="org.ibrahimhilali.TimeTracker.settings.Storage"/>
+    </extensions>
+
+    <actions>
+        <group id="org.ibrahimhilali.TimeTracker" text="Time Tracker"
+               description="![CDATA[User Time Tracker to add Time fragments]]">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action class="org.ibrahimhilali.TimeTracker.actions.Settings" id="settingsId"
+                    description="setup Time Tracker Settigns" text="Settings..."/>
+
+        </group>
+    </actions>
+</idea-plugin>
