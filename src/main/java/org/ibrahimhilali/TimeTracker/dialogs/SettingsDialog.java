@@ -6,13 +6,14 @@ import com.intellij.util.ui.GridBag;
 import com.intellij.util.ui.JBUI;
 import com.intellij.util.ui.UIUtil;
 import org.ibrahimhilali.TimeTracker.classes.User;
+import org.ibrahimhilali.TimeTracker.settings.Storage;
 
 import javax.swing.*;
 import java.util.Objects;
 
-public class Settings extends AbstractDialog {
+public class SettingsDialog extends AbstractDialog {
 
-    public Settings() {
+    public SettingsDialog() {
         super();
         setTitle("Settings");
         WIDTH = 400;
@@ -21,16 +22,16 @@ public class Settings extends AbstractDialog {
 
     @Override
     protected void checkState() {
-        setUserData(Objects.requireNonNull(User.getUser()));
+        setUserData(Objects.requireNonNull(Storage.getInstance().getState()).getUser());
     }
 
     @Override
     protected void updateState() {
-        User.setUser(
+        Objects.requireNonNull(Storage.getInstance().getState()).setUser(
                 new User(
                         ((JTextField) components.get("User Name")).getText(),
                         ((JTextField) components.get("Email")).getText(),
-                        ((JPasswordField) components.get("Token")).getPassword()
+                        ((JPasswordField) components.get("Token")).getPassword().toString()
                 )
         );
     }

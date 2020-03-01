@@ -20,6 +20,8 @@
             <add-to-group group-id="MainMenu" anchor="last"/>
             <action class="org.ibrahimhilali.TimeTracker.actions.Settings" id="settingsId"
                     description="setup Time Tracker Settigns" text="Settings..."/>
+            <action class="org.ibrahimhilali.TimeTracker.actions.Toggle" popup="true" id="ToggleId"
+                    description="Toggle Options" text="Toggle..."/>
 
         </group>
     </actions>

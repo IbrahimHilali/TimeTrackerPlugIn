@@ -27,10 +27,8 @@ public class Storage implements PersistentStateComponent<PluginState> {
     public PluginState getState() {
         return state;
     }
-
     @Override
     public void loadState(@NotNull PluginState state) {
         this.state = state;
     }
-
 }
