@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.pholser.junit.quickcheck.From;
 import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
+import generators.Users;
 import org.junit.runner.RunWith;
 
 import static org.junit.Assert.assertEquals;

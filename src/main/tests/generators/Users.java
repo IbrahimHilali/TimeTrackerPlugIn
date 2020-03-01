@@ -1,8 +1,9 @@
-package org.ibrahimhilali.TimeTracker.classes;
+package generators;
 
 import com.pholser.junit.quickcheck.generator.GenerationStatus;
 import com.pholser.junit.quickcheck.generator.Generator;
 import com.pholser.junit.quickcheck.random.SourceOfRandomness;
+import org.ibrahimhilali.TimeTracker.classes.User;
 
 
 public class Users extends Generator<User> {

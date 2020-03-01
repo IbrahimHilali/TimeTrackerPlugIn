@@ -1,4 +1,4 @@
-package org.ibrahimhilali.TimeTracker.classes;
+package generators;
 
 import com.pholser.junit.quickcheck.generator.GenerationStatus;
 import com.pholser.junit.quickcheck.generator.Generator;
