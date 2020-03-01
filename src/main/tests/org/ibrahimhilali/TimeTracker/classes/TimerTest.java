@@ -15,5 +15,7 @@ public class TimerTest {
     @Property(trials = 10)
     public void testsToString(@From(Timers.class) Timer timer) {
         assertEquals((new Gson()).toJson(timer), timer.toString());
+
+
     }
 }
